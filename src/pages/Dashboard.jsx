@@ -81,7 +81,7 @@ const Dashboard = () => {
 
   console.log(Object.keys(formDataValues).length === 0);
   return (
-    <div className="xl:max-w-2xl lg:max-w-lg md:max-w-md sm:max-w-sm max-w-xs mx-auto flex flex-col justify-center">
+    <div className="xl:max-w-xl lg:max-w-lg md:max-w-md sm:max-w-sm max-w-xs mx-auto flex flex-col justify-center">
       <h1 className="text-3xl text-center my-7">{`${data?.name}, ${data?.location}`}</h1>
       <div className="grid grid-cols-2 sm:grid-cols-2 gap-5">
         <p className="text-xs flex items-center">
@@ -183,12 +183,12 @@ const Dashboard = () => {
 
       <div
         className="py-5"
-        style={{ width: "100%", maxWidth: "100%", overflowX: "auto" }}
+        // style={{ width: "100%", maxWidth: "100%", overflowX: "auto" }}
       >
         {data && <BarChartComponent data={data.amount} />}
       </div>
       <button
-        className={`text-white rounded-lg p-3 mb-10 ${
+        className={`text-white rounded-lg p-3 mb-10  ${
           chargeCustomers === "false" ||
           Object.keys(formDataValues).length === 0 ||
           loading

@@ -10,7 +10,7 @@ const BarChartComponent = ({data}) => {
   }));
   return (<>
   <span className='text-semibold text-3xl text-center'>₹</span>
-   <BarChart width={600} height={400} data={transformedData} >
+   <BarChart width={580} height={400} data={transformedData} >
       <CartesianGrid strokeDasharray="3 3" stroke="transparent" />
       <XAxis dataKey="name" />
       <YAxis tick={false} />

@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"]:disabled {
     border-color: #C2C2C2;
-    color: #C2C2C2;
+    color: #FFFFFF;
   }
   
   /* Graph Styles */
