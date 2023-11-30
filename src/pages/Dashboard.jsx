@@ -30,6 +30,23 @@ const Dashboard = () => {
     setChargeCustomers(e.target.value);
   };
   const handleSave = async () => {
+    const categoryValues = [
+      formDataValues.category_7,
+      formDataValues.category_8,
+      formDataValues.category_9,
+      formDataValues.category_10,
+    ];
+
+    const minValues = [79, 59, 39, 19];
+
+    for (let i = 0; i < categoryValues.length; i++) {
+      if (categoryValues[i] < minValues[i]) {
+        return alert(
+          `Value for category_${i + 7} cannot be less than ${minValues[i]}`
+        );
+      }
+    }
+
     try {
       setLoading(true);
       const response = await fetch("https://stg.dhunjam.in/account/admin/4", {
